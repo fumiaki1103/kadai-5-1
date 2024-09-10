@@ -1,35 +1,35 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-    <meta charset="UTF-8">
-    <title>季節判定 - switch文</title>
-    <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<title>九九の表</title>
+<style>
+    .multiplication-table {
+        font-family: Arial, sans-serif;
+        text-align: left;
+        width: auto;
+    }
+    .multiplication-table td {
+        padding: 5px;
+    }
+</style>
 </head>
 <body>
-    <?php
-    $month = rand(1, 12);
-    switch ($month) {
-        case 3:
-        case 4:
-        case 5:
-            $season = "春";
-            break;
-        case 6:
-        case 7:
-        case 8:
-            $season = "夏";
-            break;
-        case 9:
-        case 10:
-        case 11:
-            $season = "秋";
-            break;
-        default:
-            $season = "冬";
-            break;
+<h1>九九の計算</h1>
+<table class="multiplication-table">
+<?php
+for ($i = 1; $i <= 9; $i++) {
+    echo "<tr>";
+    for ($j = 1; $j <= 9; $j++) {
+        echo "<td>" . $i . " x " . $j . " = " . ($i * $j) . "</td>";
     }
-    echo "<h1>{$month}月は{$season}の季節です。</h1>";
-    ?>
+    echo "</tr>";
+}
+?>
+</table>
+
 </body>
 </html>
+
+
 
